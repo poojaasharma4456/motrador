@@ -3063,7 +3063,8 @@ img.presell-detail-icon {
 /* Premium hover system: header + banner + footer buttons */
 .site-header .btn,
 .hero .btn,
-.site-footer .btn {
+.site-footer .btn,
+.terms-cta-actions .btn {
     position: relative;
     overflow: hidden;
     isolation: isolate;
@@ -3073,7 +3074,8 @@ img.presell-detail-icon {
 
 .site-header .btn::before,
 .hero .btn::before,
-.site-footer .btn::before {
+.site-footer .btn::before,
+.terms-cta-actions .btn::before {
     content: "";
     position: absolute;
     top: 0;
@@ -3093,7 +3095,8 @@ img.presell-detail-icon {
 
 .site-header .btn::after,
 .hero .btn::after,
-.site-footer .btn::after {
+.site-footer .btn::after,
+.terms-cta-actions .btn::after {
     content: "";
     position: absolute;
     inset: -3px;
@@ -3107,39 +3110,46 @@ img.presell-detail-icon {
 
 .site-header .btn:hover,
 .hero .btn:hover,
-.site-footer .btn:hover {
+.site-footer .btn:hover,
+.terms-cta-actions .btn:hover {
     transform: translateY(-2px) scale(1.01);
     filter: saturate(1.08);
 }
 
 .site-header .btn:hover::before,
 .hero .btn:hover::before,
-.site-footer .btn:hover::before {
+.site-footer .btn:hover::before,
+.terms-cta-actions .btn:hover::before {
     left: 130%;
 }
 
 .site-header .btn:hover::after,
 .hero .btn:hover::after,
-.site-footer .btn:hover::after {
+.site-footer .btn:hover::after,
+.terms-cta-actions .btn:hover::after {
     opacity: 1;
     transform: scale(1);
 }
 
 .site-header .btn:active,
 .hero .btn:active,
-.site-footer .btn:active {
+.site-footer .btn:active,
+.terms-cta-actions .btn:active {
     transform: translateY(0) scale(0.99);
 }
 
 .site-header .btn-primary:hover,
 .hero .btn-primary:hover,
-.site-footer .btn-primary:hover {
+.site-footer .btn-primary:hover,
+.terms-cta-actions .btn-primary:hover {
     box-shadow: 0 12px 24px rgba(22, 107, 255, 0.38);
 }
 
 .site-header .btn-outline:hover,
 .hero .btn-dark:hover,
-.site-footer .btn-dark:hover {
+.site-footer .btn-dark:hover,
+.terms-cta-actions .btn-dark:hover,
+.terms-cta-actions .btn-outline:hover {
     border-color: rgba(98, 156, 255, 0.72);
     box-shadow: 0 10px 22px rgba(7, 31, 84, 0.46);
 }
@@ -3547,5 +3557,104 @@ img.presell-detail-icon {
 
 .blog-aside-card .btn:active {
     transform: translateY(0);
+}
+
+/* Terms & conditions page */
+.terms-content-wrap .container {
+    max-width: 980px;
+}
+
+.terms-page-main .blog-single-hero-card {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.terms-page-main .blog-single-hero h1,
+.terms-page-main .blog-single-lead {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.terms-article {
+    padding: 34px;
+}
+
+.terms-block + .terms-block {
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: 1px solid #e2ecff;
+}
+
+.terms-block h2 {
+    margin: 0 0 12px;
+    font-size: clamp(22px, 2vw, 30px);
+    color: #10284b;
+    text-transform: uppercase;
+}
+
+.terms-block h3 {
+    margin: 20px 0 10px;
+    font-size: clamp(17px, 1.5vw, 21px);
+    color: #1b3f70;
+}
+
+.terms-block p {
+    margin-bottom: 12px;
+}
+
+.terms-block ul {
+    margin: 0 0 14px 20px;
+}
+
+.terms-block li {
+    margin-bottom: 6px;
+}
+
+.terms-cta-card {
+    margin-top: 22px;
+    background: linear-gradient(135deg, #091b38 0%, #102d5d 100%);
+    border: 1px solid rgba(93, 153, 255, 0.36);
+    border-radius: 18px;
+    box-shadow: 0 14px 32px rgba(10, 31, 67, 0.32);
+    padding: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.terms-cta-kicker {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #9bc4ff;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.terms-cta-card h2 {
+    margin: 0 0 8px;
+    color: #eef5ff;
+    font-size: clamp(24px, 2.2vw, 30px);
+    text-transform: uppercase;
+}
+
+.terms-cta-card p {
+    margin: 0;
+    color: #c5ddff;
+    line-height: 1.65;
+}
+
+.terms-cta-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.terms-cta-actions .btn {
+    min-width: 150px;
+    justify-content: center;
 }
 

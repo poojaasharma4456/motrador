@@ -2312,6 +2312,84 @@
     }
 }
 
+/* Final hardening: terms/privacy page responsiveness */
+@media (max-width: 1024px) {
+    .blog-single-main.terms-page-main .blog-single-content-wrap {
+        padding: 22px 0 56px;
+    }
+
+    .blog-single-main.terms-page-main .terms-content-wrap .container {
+        width: min(960px, 94%);
+    }
+
+    .blog-single-main.terms-page-main .terms-article,
+    .blog-single-main.terms-page-main .terms-cta-card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-single-main.terms-page-main .terms-content-wrap .container {
+        width: 95%;
+    }
+
+    .blog-single-main.terms-page-main .terms-article {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .blog-single-main.terms-page-main .terms-block ul {
+        margin-left: 18px;
+    }
+
+    .blog-single-main.terms-page-main .terms-cta-card {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .blog-single-main.terms-page-main .terms-cta-actions {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .blog-single-main.terms-page-main .terms-cta-actions .btn {
+        min-width: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-single-main.terms-page-main .blog-single-hero {
+        padding: 24px 0 16px;
+    }
+
+    .blog-single-main.terms-page-main .blog-single-kicker {
+        letter-spacing: 0.06em;
+        padding: 6px 10px;
+    }
+
+    .blog-single-main.terms-page-main .blog-single-hero h1 {
+        line-height: 1.14;
+    }
+
+    .blog-single-main.terms-page-main .terms-article {
+        padding: 14px 12px;
+    }
+
+    .blog-single-main.terms-page-main .terms-block + .terms-block {
+        margin-top: 18px;
+        padding-top: 18px;
+    }
+
+    .blog-single-main.terms-page-main .terms-block li {
+        margin-bottom: 5px;
+    }
+
+    .blog-single-main.terms-page-main .terms-cta-card {
+        padding: 14px 12px;
+    }
+}
+
 /* How it works (how-it-works.html) */
 @media (max-width: 1200px) {
     .hiw-card-grid {
@@ -2693,6 +2771,12 @@
     .blog-single-aside {
         min-width: 0;
     }
+
+    .terms-page-main .blog-single-hero-card,
+    .terms-page-main .terms-article,
+    .terms-page-main .terms-cta-card {
+        min-width: 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2792,6 +2876,62 @@
         overflow-wrap: anywhere;
         word-break: break-word;
     }
+
+    .terms-page-main {
+        overflow-x: hidden;
+    }
+
+    .terms-page-main .blog-single-hero {
+        padding: 36px 0 22px;
+    }
+
+    .terms-page-main .blog-single-hero h1 {
+        font-size: clamp(24px, 6.5vw, 32px);
+        line-height: 1.12;
+        margin-bottom: 12px;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .terms-page-main .blog-single-lead {
+        font-size: 15px;
+        line-height: 1.55;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .terms-article {
+        padding: 20px;
+    }
+
+    .terms-block + .terms-block {
+        margin-top: 22px;
+        padding-top: 22px;
+    }
+
+    .terms-block h2 {
+        font-size: clamp(20px, 5vw, 25px);
+    }
+
+    .terms-block h3 {
+        font-size: clamp(16px, 4vw, 19px);
+    }
+
+    .terms-cta-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        margin-top: 16px;
+    }
+
+    .terms-cta-actions {
+        width: 100%;
+        justify-content: stretch;
+    }
+
+    .terms-cta-actions .btn {
+        flex: 1 1 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2846,6 +2986,38 @@
     .blog-aside-card .btn {
         min-height: 42px;
     }
+
+    .terms-page-main .blog-single-hero {
+        padding: 28px 0 18px;
+    }
+
+    .terms-page-main .blog-single-hero h1 {
+        font-size: clamp(22px, 7.2vw, 28px);
+    }
+
+    .terms-page-main .blog-single-lead {
+        font-size: 14px;
+    }
+
+    .terms-article {
+        padding: 14px;
+    }
+
+    .terms-block h2 {
+        margin-bottom: 10px;
+    }
+
+    .terms-block ul {
+        margin-left: 16px;
+    }
+
+    .terms-cta-card {
+        padding: 16px;
+    }
+
+    .terms-cta-card h2 {
+        font-size: clamp(20px, 7vw, 24px);
+    }
 }
 
 @media (max-width: 360px) {
@@ -2855,5 +3027,17 @@
 
     .blog-single-kicker {
         font-size: 11px;
+    }
+
+    .terms-page-main .blog-single-hero h1 {
+        font-size: clamp(20px, 7vw, 24px);
+    }
+
+    .terms-page-main .blog-single-kicker {
+        font-size: 11px;
+    }
+
+    .terms-page-main .terms-block ul {
+        margin-left: 14px;
     }
 }
