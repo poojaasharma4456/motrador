@@ -1,5 +1,6 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
+const headerMenu = document.querySelector(".header-menu");
 const topbarClose = document.querySelector(".topbar-close");
 const topbar = document.querySelector(".topbar");
 
@@ -13,11 +14,18 @@ if (window.AOS) {
     });
 }
 
-if (menuToggle && mainNav) {
+if (menuToggle && mainNav && headerMenu) {
     menuToggle.addEventListener("click", () => {
         const expanded = menuToggle.getAttribute("aria-expanded") === "true";
         menuToggle.setAttribute("aria-expanded", String(!expanded));
-        mainNav.classList.toggle("show");
+        headerMenu.classList.toggle("show");
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 992) {
+            menuToggle.setAttribute("aria-expanded", "false");
+            headerMenu.classList.remove("show");
+        }
     });
 }
 
