@@ -73,25 +73,27 @@
                 <div class="shop-breaks-toolbar">
                     <label class="shop-breaks-field">
                         <span>Sort by:</span>
-                        <select aria-label="Sort shop breaks">
-                            <option>Any rarity and quality by rating</option>
-                            <option>Price: Low to High</option>
-                            <option>Price: High to Low</option>
-                            <option>Newest First</option>
+                        <select id="shopBreaksSort" aria-label="Sort shop breaks">
+                            <option value="default">Any rarity and quality by rating</option>
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                            <option value="newest">Newest First</option>
                         </select>
                     </label>
 
                     <label class="shop-breaks-field">
                         <span>Showing:</span>
-                        <select aria-label="Items per page">
-                            <option>10 results</option>
-                            <option>20 results</option>
-                            <option>30 results</option>
+                        <select id="shopBreaksShowing" aria-label="Items per page">
+                            <option value="10">10 results</option>
+                            <option value="20">20 results</option>
+                            <option value="30">30 results</option>
                         </select>
                     </label>
                 </div>
 
-                <div class="shop-breaks-grid">
+                <p class="shop-breaks-empty" id="shopBreaksEmpty" hidden>No breaks match your filters.</p>
+
+                <div class="shop-breaks-grid" id="shopBreaksGrid">
                     <article class="shop-break-card">
                         <img src="./assets/images/hero-iimg.png" alt="2024 Topps Finest Baseball Break">
                         <h3>2024 Topps Finest Baseball Hobby Box Break</h3>
@@ -169,6 +171,66 @@
                         </div>
                     </article>
 
+                    <article class="shop-break-card">
+                        <img src="./assets/images/hockey-prizm.jpg" alt="Prizm football mixer">
+                        <h3>2024 Prizm Football Parallel Mixer</h3>
+                        <p class="shop-break-meta">6 teams left in this break</p>
+                        <p class="shop-break-price">$13.00</p>
+                        <div class="shop-break-actions">
+                            <a href="#" class="btn btn-outline">View</a>
+                            <a href="#" class="btn btn-primary">Buy</a>
+                        </div>
+                    </article>
+
+                    <article class="shop-break-card">
+                        <img src="./assets/images/basketball-prizm.webp" alt="Topps cosmic special break">
+                        <h3>Topps Cosmic Special Team Break</h3>
+                        <p class="shop-break-meta">Premium random teams available</p>
+                        <p class="shop-break-price">Reserve from $149.00</p>
+                        <div class="shop-break-actions">
+                            <a href="#" class="btn btn-outline">View Details</a>
+                        </div>
+                    </article>
+                    <article class="shop-break-card">
+                        <img src="./assets/images/hockey-prizm.jpg" alt="Prizm football mixer">
+                        <h3>2024 Prizm Football Parallel Mixer</h3>
+                        <p class="shop-break-meta">6 teams left in this break</p>
+                        <p class="shop-break-price">$13.00</p>
+                        <div class="shop-break-actions">
+                            <a href="#" class="btn btn-outline">View</a>
+                            <a href="#" class="btn btn-primary">Buy</a>
+                        </div>
+                    </article>
+
+                    <article class="shop-break-card">
+                        <img src="./assets/images/basketball-prizm.webp" alt="Topps cosmic special break">
+                        <h3>Topps Cosmic Special Team Break</h3>
+                        <p class="shop-break-meta">Premium random teams available</p>
+                        <p class="shop-break-price">Reserve from $149.00</p>
+                        <div class="shop-break-actions">
+                            <a href="#" class="btn btn-outline">View Details</a>
+                        </div>
+                    </article>
+                    <article class="shop-break-card">
+                        <img src="./assets/images/hockey-prizm.jpg" alt="Prizm football mixer">
+                        <h3>2024 Prizm Football Parallel Mixer</h3>
+                        <p class="shop-break-meta">6 teams left in this break</p>
+                        <p class="shop-break-price">$13.00</p>
+                        <div class="shop-break-actions">
+                            <a href="#" class="btn btn-outline">View</a>
+                            <a href="#" class="btn btn-primary">Buy</a>
+                        </div>
+                    </article>
+
+                    <article class="shop-break-card">
+                        <img src="./assets/images/basketball-prizm.webp" alt="Topps cosmic special break">
+                        <h3>Topps Cosmic Special Team Break</h3>
+                        <p class="shop-break-meta">Premium random teams available</p>
+                        <p class="shop-break-price">Reserve from $149.00</p>
+                        <div class="shop-break-actions">
+                            <a href="#" class="btn btn-outline">View Details</a>
+                        </div>
+                    </article>
                     <article class="shop-break-card">
                         <img src="./assets/images/hockey-prizm.jpg" alt="Prizm football mixer">
                         <h3>2024 Prizm Football Parallel Mixer</h3>

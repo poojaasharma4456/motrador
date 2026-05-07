@@ -275,3 +275,60 @@ if (categoryFilters && breaksGrid) {
         applyBreakFilter(initial);
     }
 }
+
+const shopBreaksGrid = document.querySelector("#shopBreaksGrid");
+const shopBreaksSort = document.querySelector("#shopBreaksSort");
+const shopBreaksShowing = document.querySelector("#shopBreaksShowing");
+const shopBreaksEmpty = document.querySelector("#shopBreaksEmpty");
+
+if (shopBreaksGrid && shopBreaksSort && shopBreaksShowing) {
+    const originalCards = Array.from(shopBreaksGrid.querySelectorAll(".shop-break-card"));
+
+    originalCards.forEach((card, index) => {
+        card.dataset.originalIndex = String(index);
+        const priceText = card.querySelector(".shop-break-price")?.textContent || "";
+        const matches = priceText.match(/\d+(?:\.\d+)?/g);
+        const minPrice = matches ? Math.min(...matches.map(Number)) : Number.POSITIVE_INFINITY;
+        card.dataset.price = String(minPrice);
+    });
+
+    function getSortedCards(sortValue) {
+        const cards = [...originalCards];
+
+        switch (sortValue) {
+            case "price-asc":
+                return cards.sort((a, b) => Number(a.dataset.price) - Number(b.dataset.price));
+            case "price-desc":
+                return cards.sort((a, b) => Number(b.dataset.price) - Number(a.dataset.price));
+            case "newest":
+                return cards.sort(
+                    (a, b) => Number(b.dataset.originalIndex) - Number(a.dataset.originalIndex)
+                );
+            default:
+                return cards;
+        }
+    }
+
+    function applyShopBreaksFilters() {
+        const sortValue = shopBreaksSort.value;
+        const limit = Number(shopBreaksShowing.value) || originalCards.length;
+        const sortedCards = getSortedCards(sortValue);
+
+        sortedCards.forEach((card, index) => {
+            const isVisible = index < limit;
+            card.classList.toggle("is-hidden", !isVisible);
+            card.setAttribute("aria-hidden", String(!isVisible));
+            shopBreaksGrid.appendChild(card);
+        });
+
+        if (shopBreaksEmpty) {
+            const visibleCount = sortedCards.filter((card) => !card.classList.contains("is-hidden")).length;
+            shopBreaksEmpty.hidden = visibleCount > 0;
+        }
+    }
+
+    shopBreaksSort.addEventListener("change", applyShopBreaksFilters);
+    shopBreaksShowing.addEventListener("change", applyShopBreaksFilters);
+
+    applyShopBreaksFilters();
+}
