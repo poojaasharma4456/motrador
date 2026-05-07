@@ -278,7 +278,7 @@
     }
 
     .brand-text small {
-        font-size: 9px;
+        font-size: 12px;
     }
 
     .topbar p span {
@@ -421,7 +421,7 @@
     }
 
     .live-label {
-        font-size: 11px;
+        font-size: 12px;
         padding: 7px 12px;
         margin-bottom: 14px;
     }
@@ -459,7 +459,7 @@
 
     .topbar p {
         max-width: 86%;
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .section-title {
@@ -514,6 +514,560 @@
 
     .trusted-stats article:last-child {
         border-bottom: 0;
+    }
+}
+
+/* Final pass: index.html responsiveness only */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 42px 0 22px;
+    }
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .hero-content {
+        order: 2;
+        text-align: center;
+    }
+
+    .hero-media {
+        order: 1;
+        max-width: 620px;
+        margin: 0 auto;
+    }
+
+    .hero-media img {
+        margin: 0 auto;
+    }
+
+    .hero-subtitle {
+        margin-inline: auto;
+    }
+
+    .hero-cta {
+        justify-content: center;
+    }
+
+    .trust-features {
+        grid-template-columns: 1fr;
+        max-width: 460px;
+        margin-inline: auto;
+    }
+
+    .breaks-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .feature-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .buy-platform-layout {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .platform-card.points {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 900px) {
+    .stats-inner,
+    .trusted-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .stat-card:nth-child(2),
+    .trusted-stats article:nth-child(2) {
+        border-right: 0;
+    }
+
+    .stat-card:nth-child(-n + 2),
+    .trusted-stats article:nth-child(-n + 2) {
+        border-bottom: 1px solid rgba(103, 150, 235, 0.2);
+    }
+
+    .trusted-row,
+    .trusted-community-section .trusted-row.second {
+        grid-template-columns: 1fr;
+    }
+
+    .trusted-bottom-cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: clamp(30px, 8.2vw, 42px);
+        line-height: 1.08;
+    }
+
+    .hero-subtitle,
+    .section-subtitle,
+    .why-subtitle,
+    .trusted-content p,
+    .buy-intro p {
+        font-size: 14px;
+    }
+
+    .breaks-grid,
+    .feature-strip,
+    .why-grid,
+    .buy-platform-layout,
+    .buy-trust-strip,
+    .stats-inner,
+    .trusted-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-card.points {
+        grid-column: auto;
+    }
+
+    .card-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-cta,
+    .why-cta-actions,
+    .trusted-bottom-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-cta .btn,
+    .why-cta-actions .btn,
+    .trusted-bottom-actions .btn,
+    .breaks-cta-content .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 560px) {
+    .hero {
+        padding: 30px 0 16px;
+    }
+
+    .section-label {
+        padding-inline: 34px;
+    }
+
+    .section-label::before,
+    .section-label::after {
+        width: 22px;
+    }
+
+    .breaks-cta-content,
+    .why-cta-content,
+    .trusted-bottom-cta {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero h1,
+    .section-title,
+    .why-title,
+    .buy-intro h2,
+    .trusted-content h2,
+    .breaks-cta-content h3,
+    .why-cta-content h3 {
+        font-size: clamp(20px, 7vw, 28px);
+    }
+
+    .card-body,
+    .platform-card,
+    .trusted-content,
+    .review-card {
+        padding: 10px;
+    }
+
+    .card-media,
+    .platform-card-image img,
+    .trusted-media.cards img,
+    .review-card-image img,
+    .trusted-card-showcase img {
+        height: 170px;
+    }
+}
+
+/* Final pass: presells.html responsiveness only */
+@media (max-width: 1024px) {
+    .presells-hero {
+        padding: 38px 0 18px;
+    }
+
+    .presells-subtitle {
+        max-width: 92%;
+        margin-inline: auto;
+    }
+
+    .presells-toolbar {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .presells-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .presells-why-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .presells-cta-card {
+        grid-template-columns: 1fr;
+    }
+
+    .presells-cta-content {
+        text-align: center;
+    }
+
+    .presells-cta-actions {
+        justify-content: center;
+    }
+
+    .presells-cta-media {
+        justify-content: center;
+        padding: 0 12px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .presells-hero {
+        padding: 30px 0 14px;
+    }
+
+    .presells-title {
+        font-size: clamp(30px, 10vw, 44px);
+    }
+
+    .presells-subtitle {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .presells-grid,
+    .presells-why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .presell-media {
+        height: 170px;
+    }
+
+    .presell-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .presells-cta-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .presells-cta-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 560px) {
+    .presells-kicker {
+        gap: 6px;
+    }
+
+    .presells-field,
+    .presells-search {
+        padding: 9px 10px;
+    }
+
+    .presells-search-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .presells-cta-content {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 420px) {
+    .presells-hero {
+        padding: 24px 0 12px;
+    }
+
+    .presells-title,
+    .presells-cta-content h2 {
+        font-size: clamp(22px, 8vw, 30px);
+    }
+
+    .presell-body {
+        padding: 10px;
+    }
+
+    .presell-media {
+        height: 155px;
+    }
+
+    .presell-detail {
+        padding: 8px 9px;
+    }
+
+    .presells-why-item {
+        padding: 9px 7px;
+    }
+}
+
+/* Presells page responsive */
+@media (max-width: 1200px) {
+    .presells-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .presells-why-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .presells-toolbar {
+        grid-template-columns: 1fr;
+    }
+
+    .presells-cta-card {
+        grid-template-columns: 1fr;
+    }
+
+    .presells-cta-media {
+        padding: 0 14px 10px;
+        justify-content: center;
+    }
+
+    .presells-cta-media img {
+        max-width: 560px;
+        object-position: center bottom;
+    }
+}
+
+@media (max-width: 768px) {
+    .presells-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .presell-media {
+        height: 175px;
+    }
+
+    .presell-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .presells-why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .presells-cta-actions {
+        flex-direction: column;
+    }
+
+    .presells-cta-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 420px) {
+    .presells-toolbar {
+        gap: 10px;
+    }
+
+    .presells-field,
+    .presells-search {
+        padding: 9px 10px;
+        border-radius: 12px;
+    }
+
+    .presell-body {
+        padding: 12px;
+    }
+}
+
+/* Final hardening: all sections inside main only */
+@media (max-width: 992px) {
+    main {
+        overflow-x: clip;
+    }
+
+    main .hero,
+    main .trending-breaks,
+    main .why-collect,
+    main .trusted-collectors,
+    main .presells-hero,
+    main .presells-products,
+    main .presells-why,
+    main .presells-cta {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    main .hero-inner,
+    main .breaks-cta,
+    main .why-cta,
+    main .trusted-row,
+    main .trusted-community-section .trusted-row.second,
+    main .presells-cta-card {
+        grid-template-columns: 1fr;
+    }
+
+    main .breaks-grid,
+    main .feature-strip,
+    main .why-grid,
+    main .buy-platform-layout,
+    main .presells-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main .stats-inner,
+    main .trusted-stats,
+    main .buy-trust-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    main .hero-content,
+    main .breaks-cta-content,
+    main .why-cta-content,
+    main .presells-cta-content,
+    main .presells-hero-inner {
+        text-align: center;
+    }
+
+    main .hero-cta,
+    main .why-cta-actions,
+    main .trusted-bottom-actions,
+    main .presells-cta-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    main .stats-inner,
+    main .trusted-stats,
+    main .buy-trust-strip,
+    main .presells-why-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main .card-meta,
+    main .presell-actions {
+        grid-template-columns: 1fr;
+    }
+
+    main .hero-cta,
+    main .why-cta-actions,
+    main .trusted-bottom-actions,
+    main .presells-cta-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+
+    main .hero-cta .btn,
+    main .why-cta-actions .btn,
+    main .trusted-bottom-actions .btn,
+    main .breaks-cta-content .btn,
+    main .presells-cta-actions .btn,
+    main .presell-actions .btn {
+        width: 100%;
+    }
+
+    main .presells-toolbar {
+        grid-template-columns: 1fr;
+    }
+
+    main .presells-cta-media {
+        padding: 0 12px 10px;
+        justify-content: center;
+    }
+    main .breaks-grid{
+        grid-template-columns: 1fr;
+    }
+   
+}
+
+@media (max-width: 560px) {
+    main .section-label {
+        padding-inline: 34px;
+    }
+
+    main .section-label::before,
+    main .section-label::after {
+        width: 22px;
+    }
+
+    main .breaks-cta-content,
+    main .why-cta-content,
+    main .presells-cta-content {
+        padding: 16px;
+    }
+
+    main .presells-field,
+    main .presells-search {
+        padding: 9px 10px;
+    }
+
+    main .presell-media,
+    main .card-media {
+        height: 170px;
+    }
+    main .presells-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    main .presells-why-grid {
+        grid-template-columns: 1fr;
+    }
+    main .stats-inner,
+    main .trusted-stats,
+    main .buy-trust-strip,
+    main .presells-why-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 420px) {
+    main .section-title,
+    main .why-title,
+    main .buy-intro h2,
+    main .trusted-content h2,
+    main .breaks-cta-content h3,
+    main .why-cta-content h3,
+    main .presells-title,
+    main .presells-cta-content h2 {
+        font-size: clamp(20px, 7vw, 26px);
+    }
+
+    main .card-body,
+    main .presell-body,
+    main .trusted-content,
+    main .platform-card,
+    main .review-card {
+        padding: 10px;
+    }
+
+    main .presell-media,
+    main .card-media,
+    main .platform-card-image img,
+    main .review-card-image img,
+    main .trusted-card-showcase img,
+    main .trusted-media.cards img {
+        height: 160px;
     }
 }
 
@@ -621,7 +1175,7 @@
     }
 
     .live-label {
-        font-size: 10px;
+        font-size: 12px;
         padding: 6px 10px;
     }
 
@@ -1056,7 +1610,7 @@
     }
 
     .topbar p {
-        font-size: 11px;
+        font-size: 12px;
         max-width: 86%;
     }
 
@@ -1065,7 +1619,7 @@
     }
 
     .live-label {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .section-title,
@@ -1301,6 +1855,12 @@
     .why-cta-actions .btn {
         min-height: 42px;
         font-size: 13px;
+    }
+    .feature-strip.aos-init.aos-animate {
+        grid-template-columns: 1fr;
+    }
+    main .why-grid{
+        grid-template-columns: 1fr;
     }
 }
 

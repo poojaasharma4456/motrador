@@ -5,11 +5,13 @@
 }
 
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Open Sans", sans-serif;
     background: #020917;
     color: #f4f8ff;
 }
-
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+}
 /* Global scrollbar theme */
 * {
     scrollbar-width: thin;
@@ -128,6 +130,14 @@ a {
     color: #2f8fff;
 }
 
+.main-nav a.active {
+    color: #2f8fff;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+}
+
 .header-actions {
     display: flex;
     align-items: center;
@@ -166,7 +176,7 @@ a {
     display: grid;
     place-items: center;
     background: #0f7fff;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 700;
 }
 
@@ -250,7 +260,7 @@ a {
     border-radius: 999px;
     border: 1px solid rgba(84, 149, 255, 0.34);
     background: rgba(4, 18, 42, 0.9);
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.7px;
     color: #cde3ff;
@@ -335,7 +345,7 @@ a {
 }
 
 .trust-item p {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.2;
     color: #9eb9df;
     margin-top: 2px;
@@ -402,6 +412,480 @@ a {
     background: #f5f8ff;
     color: #0d1627;
     padding: 64px 0 72px;
+}
+
+/* Presells page */
+.presells-hero {
+    background: #f5f8ff;
+    color: #0d1627;
+    padding: 46px 0 20px;
+}
+
+.presells-hero-inner {
+    text-align: center;
+}
+
+.presells-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    color: #1f67e5;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.presells-kicker-icon {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(31, 103, 229, 0.35);
+    background: rgba(31, 103, 229, 0.08);
+    font-size: 13px;
+}
+
+.presells-title {
+    font-size: clamp(36px, 5vw, 62px);
+    line-height: 1.02;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #0d1627;
+}
+
+.presells-subtitle {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #4a5a75;
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+.presells-toolbar {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 12px;
+    align-items: center;
+}
+
+.presells-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    border: 1px solid #dbe7fb;
+    border-radius: 12px;
+    padding: 10px 12px;
+    box-shadow: 0 10px 22px rgba(21, 52, 102, 0.06);
+}
+
+.presells-field-label {
+    color: #5a6f91;
+    font-weight: 700;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.presells-select {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: transparent;
+    font-weight: 700;
+    color: #1a2a43;
+    font-size: 13px;
+}
+
+.presells-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    border: 1px solid #dbe7fb;
+    border-radius: 12px;
+    padding: 10px 12px;
+    box-shadow: 0 10px 22px rgba(21, 52, 102, 0.06);
+}
+
+.presells-search-icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    /* background: #edf3ff; */
+    color: #1f67e5;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.presells-search-input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: transparent;
+    font-size: 13px;
+    color: #1a2a43;
+    font-weight: 600;
+}
+
+.presells-search-input::placeholder {
+    color: #7b90b2;
+    font-weight: 600;
+}
+
+.presells-products {
+    background: #f5f8ff;
+    padding: 16px 0 28px;
+    color: #0d1627;
+}
+
+.presells-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.presell-card {
+    background: #ffffff;
+    border: 1px solid #dbe7fb;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 26px rgba(21, 52, 102, 0.08);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.presell-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(47, 143, 255, 0.35);
+    box-shadow: 0 16px 30px rgba(20, 60, 130, 0.12);
+}
+
+.presell-media {
+    position: relative;
+    height: 190px;
+    background: #071a3e;
+}
+
+.presell-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.presell-badge {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 2;
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.presell-badge.limited {
+    background: #1e67eb;
+}
+
+.presell-badge.live {
+    background: #f23043;
+}
+
+.presell-badge.hot {
+    background: #0ea95d;
+}
+
+.presell-body {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.presell-title {
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    color: #132542;
+}
+
+.presell-desc {
+    color: #526885;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    min-height: 60px;
+}
+
+.presell-details {
+    display: grid;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.presell-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f4f8ff;
+    border: 1px solid #dce7fa;
+    border-radius: 10px;
+    padding: 9px 10px;
+}
+
+.presell-detail-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    background: #e5efff;
+    color: #1968e7;
+    font-weight: 900;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+/* When used as an image element, render icon cleanly */
+img.presell-detail-icon {
+    display: block;
+    object-fit: contain;
+    padding: 3px;
+}
+
+.presell-detail-text {
+    color: #1a2a43;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.presell-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.presell-btn {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+}
+
+/* Make Presells outline buttons look dark (View Details) */
+.presell-card .btn.btn-outline.presell-btn {
+    color: #0d1627;
+    border-color: rgba(13, 22, 39, 0.55);
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.presell-card .btn.btn-outline.presell-btn:hover {
+    color: #0d1627;
+    border-color: rgba(13, 22, 39, 0.75);
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 10px 22px rgba(7, 31, 84, 0.12);
+}
+
+/* Modern hover effects for Presells buttons (cards + bottom CTA) */
+.presell-card .btn,
+.presells-cta-card .btn {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    transform: translateY(0);
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        filter 0.22s ease,
+        background-color 0.22s ease,
+        border-color 0.22s ease,
+        color 0.22s ease;
+}
+
+.presell-card .btn::before,
+.presells-cta-card .btn::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(255, 255, 255, 0.38) 48%,
+        rgba(255, 255, 255, 0) 66%
+    );
+    transform: translateX(-120%);
+    transition: transform 0.55s ease;
+    z-index: -1;
+}
+
+.presell-card .btn:hover,
+.presells-cta-card .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(20, 60, 130, 0.16);
+    filter: saturate(1.08);
+}
+
+.presell-card .btn:hover::before,
+.presells-cta-card .btn:hover::before {
+    transform: translateX(120%);
+}
+
+.presell-card .btn:active,
+.presells-cta-card .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 10px 18px rgba(20, 60, 130, 0.14);
+}
+
+.presell-card .btn:focus-visible,
+.presells-cta-card .btn:focus-visible {
+    outline: 2px solid rgba(21, 123, 255, 0.85);
+    outline-offset: 3px;
+}
+
+/* Slightly stronger glow for primary buttons */
+.presell-card .btn.btn-primary.presell-btn:hover,
+.presells-cta-actions .btn.btn-primary:hover {
+    box-shadow: 0 18px 36px rgba(15, 127, 255, 0.28);
+}
+
+/* Slightly stronger hover for dark outline buttons */
+.presells-cta-card .btn.btn-dark:hover {
+    box-shadow: 0 18px 36px rgba(7, 31, 84, 0.34);
+}
+
+.presells-why {
+    background: #f5f8ff;
+    padding: 8px 0 28px;
+    color: #0d1627;
+}
+
+.presells-why-title {
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: #132542;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.presells-why-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+    background: #ffffff;
+    border: 1px solid #dbe7fb;
+    border-radius: 14px;
+    padding: 12px;
+    box-shadow: 0 10px 22px rgba(21, 52, 102, 0.06);
+}
+
+.presells-why-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 8px;
+    border-radius: 12px;
+    background: #f7fbff;
+    border: 1px solid #e3eeff;
+    color: #203a61;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.3;
+}
+
+.presells-why-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: block;
+    object-fit: contain;
+    padding: 6px;
+    /* background: linear-gradient(180deg, #1e76ff, #0d59d5); */
+    /* box-shadow: 0 10px 18px rgba(30, 118, 255, 0.22); */
+}
+
+.presells-cta {
+    background: #f5f8ff;
+    padding: 0 0 56px;
+    color: #0d1627;
+}
+
+.presells-cta-card {
+    border-radius: 18px;
+    border: 1px solid rgba(80, 133, 229, 0.34);
+    background:
+        radial-gradient(circle at 18% 30%, rgba(41, 126, 255, 0.28), transparent 55%),
+        linear-gradient(120deg, #031126 0%, #061b44 52%, #041330 100%);
+    color: #f2f6ff;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    min-height: 240px;
+    box-shadow: 0 14px 30px rgba(8, 22, 58, 0.35);
+}
+
+.presells-cta-content {
+    padding: 28px 28px;
+}
+
+.presells-cta-content h2 {
+    font-size: clamp(22px, 2.3vw, 34px);
+    line-height: 1.08;
+    letter-spacing: -0.4px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.presells-cta-content p {
+    color: #c4daf9;
+    font-size: 16px;
+    line-height: 1.45;
+    max-width: 520px;
+    margin-bottom: 18px;
+}
+
+.presells-cta-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.presells-cta-media {
+    padding: 10px 18px 0 0;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.presells-cta-media img {
+    width: 100%;
+    max-width: 520px;
+    height: 100%;
+    object-fit: contain;
+    object-position: right bottom;
+    opacity: 0.98;
+    filter: drop-shadow(0 18px 26px rgba(4, 12, 30, 0.65));
 }
 
 .section-label {
@@ -556,7 +1040,7 @@ a {
     position: absolute;
     z-index: 1;
     border-radius: 999px;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.3px;
     padding: 6px 10px;
@@ -626,7 +1110,7 @@ a {
     place-items: center;
     background: #e5efff;
     color: #1968e7;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     flex-shrink: 0;
 }
@@ -634,7 +1118,7 @@ a {
 .meta-text small {
     display: block;
     color: #6b7e9d;
-    font-size: 10px;
+    font-size: 13px;
     line-height: 1.1;
 }
 
@@ -1506,7 +1990,7 @@ a {
 }
 
 .review-head p {
-    font-size: 12px;
+    font-size: 13px;
     color: #6d82a4;
 }
 
@@ -1664,7 +2148,7 @@ a {
 .footer-tag {
     color: #2d8cff;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: 0.9px;
     margin-bottom: 10px;
 }
@@ -1701,7 +2185,7 @@ a {
     background: rgba(20, 122, 255, 0.16);
     border: 1px solid rgba(84, 150, 255, 0.35);
     color: #2a8cff;
-    font-size: 12px;
+    font-size: 13px;
     flex-shrink: 0;
 }
 
