@@ -331,6 +331,7 @@ a {
     line-height: 1.2;
     color: #ecf4ff;
     font-weight: 700;
+    text-align: left;
 }
 
 .trust-item p {
@@ -338,6 +339,7 @@ a {
     line-height: 1.2;
     color: #9eb9df;
     margin-top: 2px;
+    text-align: left;
 }
 
 .hero-media {
