@@ -117,6 +117,7 @@ a {
     align-items: center;
     gap: 24px;
     flex: 1;
+    justify-content: center;
 }
 
 .header-menu {
@@ -716,7 +717,8 @@ img.presell-detail-icon {
 
 /* Modern hover effects for Presells buttons (cards + bottom CTA) */
 .presell-card .btn,
-.presells-cta-card .btn {
+.presells-cta-card .btn,
+.shop-break-card .btn {
     position: relative;
     overflow: hidden;
     isolation: isolate;
@@ -731,7 +733,8 @@ img.presell-detail-icon {
 }
 
 .presell-card .btn::before,
-.presells-cta-card .btn::before {
+.presells-cta-card .btn::before,
+.shop-break-card .btn::before {
     content: "";
     position: absolute;
     inset: -2px;
@@ -747,25 +750,29 @@ img.presell-detail-icon {
 }
 
 .presell-card .btn:hover,
-.presells-cta-card .btn:hover {
+.presells-cta-card .btn:hover,
+.shop-break-card .btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 16px 30px rgba(20, 60, 130, 0.16);
     filter: saturate(1.08);
 }
 
 .presell-card .btn:hover::before,
-.presells-cta-card .btn:hover::before {
+.presells-cta-card .btn:hover::before,
+.shop-break-card .btn:hover::before {
     transform: translateX(120%);
 }
 
 .presell-card .btn:active,
-.presells-cta-card .btn:active {
+.presells-cta-card .btn:active,
+.shop-break-card .btn:active {
     transform: translateY(0);
     box-shadow: 0 10px 18px rgba(20, 60, 130, 0.14);
 }
 
 .presell-card .btn:focus-visible,
-.presells-cta-card .btn:focus-visible {
+.presells-cta-card .btn:focus-visible,
+.shop-break-card .btn:focus-visible {
     outline: 2px solid rgba(21, 123, 255, 0.85);
     outline-offset: 3px;
 }
@@ -3151,3 +3158,158 @@ img.presell-detail-icon {
 .site-header .icon-btn:active {
     transform: translateY(0);
 }
+
+/* Shop Breaks page */
+.shop-breaks-page {
+    padding: 72px 0 88px;
+    background: linear-gradient(180deg, #f7f9ff 0%, #eef3ff 100%);
+}
+
+.shop-breaks-title {
+    margin: 0 0 22px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(30px, 4.3vw, 50px);
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: #0f1d3a;
+}
+
+.shop-breaks-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 26px;
+    flex-wrap: wrap;
+    padding: 0 2px;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.shop-breaks-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1f3768;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.shop-breaks-field select {
+    min-width: 240px;
+    height: 40px;
+    border: 1px solid #cad9fb;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #183061;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0 12px;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(23, 62, 133, 0.08);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shop-breaks-field select:focus {
+    border-color: #86adf6;
+    box-shadow: 0 0 0 3px rgba(82, 133, 236, 0.18);
+}
+
+.shop-breaks-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.shop-break-card {
+    background: #fff;
+    border: 1px solid #dce6fb;
+    border-radius: 16px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    box-shadow: 0 14px 34px rgba(18, 53, 123, 0.08);
+    transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+}
+
+.shop-break-card:hover {
+    transform: translateY(-5px);
+    border-color: #b8cdf8;
+    box-shadow: 0 18px 36px rgba(15, 49, 116, 0.14);
+}
+
+.shop-break-card img {
+    width: 100%;
+    height: 168px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #e3ebf9;
+}
+
+.shop-break-card h3 {
+    margin: 12px 0 8px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: #10264f;
+    min-height: 48px;
+    max-width: 290px;
+    margin: 0 auto;
+    margin-top: 17px;
+}
+
+.shop-break-meta {
+    margin: 0 0 10px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: #445f95;
+    min-height: 30px;
+}
+
+.shop-break-price {
+    margin: 0 0 12px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #2b57a7;
+}
+
+.shop-break-actions {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.shop-break-actions .btn {
+    width: 100%;
+    min-height: 38px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.shop-break-actions .btn.btn-outline {
+    color: #0d1627;
+    border-color: rgba(13, 22, 39, 0.55);
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.shop-break-actions .btn.btn-primary {
+    color: #ffffff;
+}
+
+.shop-break-actions .btn:only-child {
+    grid-column: 1 / -1;
+}
+
