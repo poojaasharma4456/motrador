@@ -99,7 +99,7 @@
                 </div>
 
                 <div class="hero-media" data-aos="fade-up" data-aos-delay="160">
-                    <img src="./assets/images/banner-bg.png" alt="Sports cards showcase banner">
+                    <img src="./assets/images/prix-card-2.png" alt="Sports cards showcase banner">
                 </div>
             </div>
         </section>
@@ -118,21 +118,27 @@
                     Secure your spot in premium hobby box breaks featuring NFL, NBA, MLB, Soccer, and rare graded cards.
                 </p>
 
-                <div class="category-filters" data-aos="fade-up" data-aos-delay="180">
-                    <button class="filter-pill active" type="button"><span class="pill-icon">🏈</span>Football</button>
-                    <button class="filter-pill" type="button"><span class="pill-icon">🏀</span>Basketball</button>
-                    <button class="filter-pill" type="button"><span class="pill-icon">⚾</span>Baseball</button>
-                    <button class="filter-pill" type="button"><span class="pill-icon">⚽</span>Soccer</button>
-                    <button class="filter-pill" type="button"><span class="pill-icon">🏒</span>Hockey</button>
-                    <button class="filter-pill" type="button"><span class="pill-icon">🎴</span>Pokemon</button>
+                <div class="category-filters" data-aos="fade-up" data-aos-delay="180" aria-label="Break categories">
+                    <button class="filter-pill active" type="button" data-filter="football" aria-pressed="true"><span
+                            class="pill-icon">🏈</span>Football</button>
+                    <button class="filter-pill" type="button" data-filter="basketball" aria-pressed="false"><span
+                            class="pill-icon">🏀</span>Basketball</button>
+                    <button class="filter-pill" type="button" data-filter="baseball" aria-pressed="false"><span
+                            class="pill-icon">⚾</span>Baseball</button>
+                    <button class="filter-pill" type="button" data-filter="soccer" aria-pressed="false"><span
+                            class="pill-icon">⚽</span>Soccer</button>
+                    <button class="filter-pill" type="button" data-filter="hockey" aria-pressed="false"><span
+                            class="pill-icon">🏒</span>Hockey</button>
+                    <button class="filter-pill" type="button" data-filter="pokemon" aria-pressed="false"><span
+                            class="pill-icon">🎴</span>Pokemon</button>
                 </div>
 
                 <div class="breaks-grid">
-                    <article class="break-card" data-aos="fade-up" data-aos-delay="220">
+                    <article class="break-card" data-category="football" data-aos="fade-up" data-aos-delay="220">
                         <div class="card-media">
                             <span class="status-badge featured">FEATURED</span>
                             <span class="sport-badge">FOOTBALL</span>
-                            <img src="./assets/images/hero-iimg.png" alt="2024 Prizm Football Hobby Break">
+                            <img src="./assets/images/football-prizm.webp" alt="2024 Prizm Football Hobby Break">
                         </div>
                         <div class="card-body">
                             <h3>2024 Prizm Football Hobby Break</h3>
@@ -163,11 +169,11 @@
                         </div>
                     </article>
 
-                    <article class="break-card" data-aos="fade-up" data-aos-delay="300">
+                    <article class="break-card" data-category="basketball" data-aos="fade-up" data-aos-delay="300">
                         <div class="card-media">
                             <span class="status-badge live">LIVE TONIGHT</span>
                             <span class="sport-badge">BASKETBALL</span>
-                            <img src="./assets/images/hero-iimg.png" alt="NBA Select Mega Box Break">
+                            <img src="./assets/images/basketball-prizm.webp" alt="NBA Select Mega Box Break">
                         </div>
                         <div class="card-body">
                             <h3>NBA Select Mega Box Break</h3>
@@ -198,11 +204,11 @@
                         </div>
                     </article>
 
-                    <article class="break-card" data-aos="fade-up" data-aos-delay="380">
+                    <article class="break-card" data-category="baseball" data-aos="fade-up" data-aos-delay="380">
                         <div class="card-media">
                             <span class="status-badge soon">STARTING SOON</span>
                             <span class="sport-badge">BASEBALL</span>
-                            <img src="./assets/images/hero-iimg.png" alt="Topps Chrome Baseball Break">
+                            <img src="./assets/images/baseball-prizm.jpg" alt="Topps Chrome Baseball Break">
                         </div>
                         <div class="card-body">
                             <h3>Topps Chrome Baseball Break</h3>
@@ -230,6 +236,111 @@
                                 </div>
                             </div>
                             <a href="#" class="btn btn-primary wide">RESERVE SPOT</a>
+                        </div>
+                    </article>
+
+                    <article class="break-card" data-category="soccer" data-aos="fade-up" data-aos-delay="440">
+                        <div class="card-media">
+                            <span class="status-badge soon">STARTING SOON</span>
+                            <span class="sport-badge">SOCCER</span>
+                            <img src="./assets/images/soccer-prizm.jpg" alt="Topps UEFA Chrome Break">
+                        </div>
+                        <div class="card-body">
+                            <h3>Topps UEFA Chrome Hobby Break</h3>
+                            <div class="card-meta">
+                                <div class="meta-item">
+                                    <span class="meta-icon">👥</span>
+                                    <div class="meta-text">
+                                        <small>Spots Left</small>
+                                        <strong>10</strong>
+                                    </div>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-icon">⏳</span>
+                                    <div class="meta-text">
+                                        <small>Starting Soon</small>
+                                        <strong>02:10:00</strong>
+                                    </div>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-icon">$</span>
+                                    <div class="meta-text">
+                                        <small>Per Spot</small>
+                                        <strong>$44</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary wide">RESERVE SPOT</a>
+                        </div>
+                    </article>
+
+                    <article class="break-card" data-category="hockey" data-aos="fade-up" data-aos-delay="500">
+                        <div class="card-media">
+                            <span class="status-badge live">LIVE TONIGHT</span>
+                            <span class="sport-badge">HOCKEY</span>
+                            <img src="./assets/images/hockey-prizm.jpg" alt="Upper Deck Series 1 Break">
+                        </div>
+                        <div class="card-body">
+                            <h3>Upper Deck Series 1 Hobby Break</h3>
+                            <div class="card-meta">
+                                <div class="meta-item">
+                                    <span class="meta-icon">👥</span>
+                                    <div class="meta-text">
+                                        <small>Spots Left</small>
+                                        <strong>6</strong>
+                                    </div>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-icon">🔴</span>
+                                    <div class="meta-text">
+                                        <small>Live Tonight</small>
+                                        <strong>8:30 PM EST</strong>
+                                    </div>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-icon">$</span>
+                                    <div class="meta-text">
+                                        <small>Per Spot</small>
+                                        <strong>$52</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-dark wide">VIEW BREAK</a>
+                        </div>
+                    </article>
+
+                    <article class="break-card" data-category="pokemon" data-aos="fade-up" data-aos-delay="560">
+                        <div class="card-media">
+                            <span class="status-badge featured">FEATURED</span>
+                            <span class="sport-badge">POKEMON</span>
+                            <img src="./assets/images/hero-iimg.png" alt="151 Booster Box Break">
+                        </div>
+                        <div class="card-body">
+                            <h3>Scarlet &amp; Violet 151 Booster Break</h3>
+                            <div class="card-meta">
+                                <div class="meta-item">
+                                    <span class="meta-icon">👥</span>
+                                    <div class="meta-text">
+                                        <small>Spots Left</small>
+                                        <strong>4</strong>
+                                    </div>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-icon">⏰</span>
+                                    <div class="meta-text">
+                                        <small>Starts In</small>
+                                        <strong>00:55:40</strong>
+                                    </div>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-icon">$</span>
+                                    <div class="meta-text">
+                                        <small>Per Spot</small>
+                                        <strong>$59</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary wide">JOIN BREAK</a>
                         </div>
                     </article>
                 </div>

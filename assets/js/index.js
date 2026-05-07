@@ -181,3 +181,89 @@ if (reviewSlider) {
     goToSlide(0);
     startSlider();
 }
+
+const categoryFilters = document.querySelector(".category-filters");
+const breaksGrid = document.querySelector(".breaks-grid");
+
+if (categoryFilters && breaksGrid) {
+    const pills = categoryFilters.querySelectorAll(".filter-pill");
+    const categoryOrder = Array.from(pills)
+        .map((pill) => pill.dataset.filter)
+        .filter(Boolean);
+
+    function ensureThreeCardsPerCategory() {
+        const cardsByCategory = new Map();
+        categoryOrder.forEach((category) => cardsByCategory.set(category, []));
+
+        breaksGrid.querySelectorAll(".break-card").forEach((card) => {
+            const category = card.dataset.category;
+            if (cardsByCategory.has(category)) {
+                cardsByCategory.get(category).push(card);
+            }
+        });
+
+        categoryOrder.forEach((category) => {
+            const existingCards = cardsByCategory.get(category);
+            const templateCard = existingCards[0];
+
+            if (!templateCard) {
+                return;
+            }
+
+            for (let i = existingCards.length; i < 3; i += 1) {
+                const clone = templateCard.cloneNode(true);
+                const title = clone.querySelector("h3");
+                const spots = clone.querySelector(".meta-item .meta-text strong");
+                const startsAt = clone.querySelectorAll(".meta-item .meta-text strong")[1];
+                const price = clone.querySelectorAll(".meta-item .meta-text strong")[2];
+
+                if (title) {
+                    title.textContent = `${title.textContent} #${i + 1}`;
+                }
+                if (spots) {
+                    spots.textContent = String(Math.max(2, Number(spots.textContent) - i * 2 || (12 - i * 2)));
+                }
+                if (startsAt) {
+                    startsAt.textContent = i === 1 ? "01:10:00" : "03:25:00";
+                }
+                if (price) {
+                    const numericPrice = Number(price.textContent.replace(/[^0-9]/g, "")) || 39;
+                    price.textContent = `$${numericPrice + (i * 5)}`;
+                }
+
+                clone.setAttribute("data-aos-delay", String(220 + (i * 40)));
+                breaksGrid.appendChild(clone);
+            }
+        });
+    }
+
+    ensureThreeCardsPerCategory();
+
+    function applyBreakFilter(category) {
+        const cards = breaksGrid.querySelectorAll(".break-card");
+        cards.forEach((card) => {
+            const isMatch = card.dataset.category === category;
+            card.classList.toggle("is-hidden", !isMatch);
+            card.setAttribute("aria-hidden", String(!isMatch));
+        });
+        pills.forEach((pill) => {
+            const active = pill.dataset.filter === category;
+            pill.classList.toggle("active", active);
+            pill.setAttribute("aria-pressed", String(active));
+        });
+    }
+
+    pills.forEach((pill) => {
+        pill.addEventListener("click", () => {
+            const category = pill.dataset.filter;
+            if (category) {
+                applyBreakFilter(category);
+            }
+        });
+    });
+
+    const initial = categoryFilters.querySelector(".filter-pill.active")?.dataset.filter;
+    if (initial) {
+        applyBreakFilter(initial);
+    }
+}
