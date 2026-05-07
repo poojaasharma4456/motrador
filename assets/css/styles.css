@@ -3658,3 +3658,375 @@ img.presell-detail-icon {
     justify-content: center;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Shop-Breaks*/
+.shopbreak-sec *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.shopbreak-sec{
+    background:#fff;
+    color:#111827;
+    padding:50px 0;
+}
+
+.shopbreak-sec .shop-breaks{
+    max-width:1400px;
+    margin:auto;
+    padding:0 20px;
+}
+
+/* =========================
+TITLE
+========================= */
+
+.shopbreak-sec .top-small{
+    text-align:center;
+    text-transform:uppercase;
+    margin-bottom:8px;
+        color: #1f67e5;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+
+.shopbreak-sec .main-title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 16px;
+    letter-spacing: 0.6px;
+    font-family: 'Open Sans';
+}
+.shopbreak-sec .subtext{
+    max-width:760px;
+    margin:0 auto 40px;
+    text-align:center;
+}
+
+/* =========================
+FILTERS
+========================= */
+
+.shopbreak-sec .filters{
+    display:flex;
+    gap:18px;
+    margin-bottom:30px;
+}
+
+.shopbreak-sec .filter-box{
+   width:240px;
+    height:72px;
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:14px;
+    padding:12px 50px 12px 18px;
+    position:relative;
+    cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.shopbreak-sec .filter-label{
+  font-size:11px;
+    color:#9ca3af;
+    text-transform:uppercase;
+    font-weight:700;
+    margin-bottom:4px;
+    line-height:1;
+
+}
+
+.shopbreak-sec .filter-value{
+    font-size:16px;
+    font-weight:700;
+    line-height:1.2;
+
+}
+.shopbreak-sec .select-wrap{
+    width:240px;
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:16px;
+    padding:12px 18px;
+}
+.shopbreak-sec .select-wrap label{
+    display:block;
+    font-size:11px;
+    color:#9ca3af;
+    text-transform:uppercase;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+.shopbreak-sec .select-wrap select{
+    width:100%;
+    border:none;
+    outline:none;
+    background:transparent;
+    font-size:16px;
+    font-weight:700;
+    color:#111827;
+    cursor:pointer;
+}
+.shopbreak-sec .filter-box svg{
+  position:absolute;
+    right:18px;
+    top:50%;
+    transform:translateY(-50%);
+    width:18px;
+    height:18px;
+    stroke:#111827;
+    pointer-events:none;
+}
+
+.shopbreak-sec .search-box{
+    flex:1;
+    position:relative;
+}
+
+.shopbreak-sec .search-box input{
+    width:100%;
+    height:100%;
+    min-height:72px;
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:14px;
+    padding:0 20px 0 58px;
+    outline:none;
+    font-size:16px;
+}
+
+.shopbreak-sec .search-box svg{
+    position:absolute;
+    left:20px;
+    top:50%;
+    transform:translateY(-50%);
+    width:22px;
+    stroke:#6b7280;
+}
+
+/* =========================
+CARDS
+========================= */
+
+.shopbreak-sec .cards-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+}
+
+.shopbreak-sec .break-card{
+    background:#fff;
+    border-radius:16px;
+    overflow:hidden;
+    border:1px solid #e5e7eb;
+    transition:.3s ease;
+    display:flex;
+    flex-direction:column;
+}
+
+.shopbreak-sec .break-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.shopbreak-sec .card-image{
+    height:240px;
+    position:relative;
+    overflow:hidden;
+}
+
+.shopbreak-sec .card-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.shopbreak-sec .tag{
+    position:absolute;
+    top:12px;
+    left:12px;
+    padding:7px 12px;
+    border-radius:8px;
+    color:#fff;
+    font-size:11px;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+.shopbreak-sec .red{
+    background:#ef4444;
+}
+
+.shopbreak-sec .orange{
+    background:#f97316;
+}
+
+.shopbreak-sec .blue{
+    background:#2563eb;
+}
+
+.shopbreak-sec .green{
+    background:#16a34a;
+}
+
+.shopbreak-sec .purple{
+    background:#7c3aed;
+}
+
+.shopbreak-sec .card-content{
+    padding:18px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+.shopbreak-sec .card-title{
+    font-size:22px;
+    font-weight:800;
+    line-height:1.3;
+    margin-bottom:12px;
+}
+
+.shopbreak-sec .card-desc{
+    color:#6b7280;
+    font-size:14px;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+.shopbreak-sec .price{
+    font-size:22px;
+    font-weight:900;
+    margin-bottom:15px;
+}
+
+.shopbreak-sec .meta{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#4b5563;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.shopbreak-sec .meta svg{
+    width:16px;
+    stroke:#2454ff;
+}
+
+.shopbreak-sec .buttons{
+    display:flex;
+    gap:10px;
+    margin-top:auto;
+}
+
+.shopbreak-sec .btn{
+    flex:1;
+    height:44px;
+    border:none;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.shopbreak-sec .btn:hover{
+    transform:translateY(-2px);
+}
+
+.shopbreak-sec .btn-outline{
+    background:#fff;
+    border:1px solid #d1d5db;
+}
+
+.shopbreak-sec .btn-primary{
+    background:#2454ff;
+    color:#fff;
+}
+
+/* =========================
+FEATURES
+========================= */
+
+.shopbreak-sec .features{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+}
+
+.shopbreak-sec .feature-box{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:20px;
+    padding:30px;
+}
+
+.shopbreak-sec .feature-title{
+    text-align:center;
+    font-size:28px;
+    font-weight:900;
+    margin-bottom:30px;
+}
+
+.shopbreak-sec .feature-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.shopbreak-sec .feature-item{
+    text-align:center;
+}
+
+.shopbreak-sec .feature-icon{
+    width:62px;
+    height:62px;
+    border-radius:16px;
+    background:#f3f4f6;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto auto 14px;
+}
+
+.shopbreak-sec .feature-icon svg{
+    width:28px;
+    stroke:#2454ff;
+}
+
+.shopbreak-sec .feature-item h4{
+    font-size:14px;
+    line-height:1.5;
+}
+/*Shop-Breaks*/
+
+
+/* =========================
+RESPONSIVE
+========================= */
